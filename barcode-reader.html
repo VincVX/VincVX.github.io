@@ -116,7 +116,7 @@
             defaultSettings = await reader.outputRuntimeSettingsToString();
             document.getElementById("json-data").value = defaultSettings; 
             //JSON.stringify(runtimeSettings, null, 2);
-            reader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":512}}")
+            reader.updateRuntimeSetting('coverage')
 
             
         })();
