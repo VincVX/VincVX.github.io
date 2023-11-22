@@ -83,7 +83,7 @@
 
     async function initBarcodeScanner() {
       scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-      await scanner.updateRuntimeSettings("speed");
+      await scanner.updateRuntimeSettings("coverage");
       await scanner.setUIElement(document.getElementById('videoContainer'));
 
       let cameras = await scanner.getAllCameras();

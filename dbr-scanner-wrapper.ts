@@ -33,7 +33,7 @@ class DBRWrapper {
 
         await Dynamsoft.DBR.BarcodeScanner.loadWasm();
         this.scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-        await this.scanner.updateRuntimeSettings("speed");
+        await this.scanner.updateRuntimeSettings("coverage");
         await this.scanner.setUIElement(this.videoContainer);
         let cameras = await this.scanner.getAllCameras();
         this.appendCameraSource(cameras);
@@ -67,7 +67,7 @@ class DBRWrapper {
 
     async createDefaultScanner(callback) {
         this.scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-        await this.scanner.updateRuntimeSettings("speed");
+        await this.scanner.updateRuntimeSettings("coverage");
         this.scanner.onFrameRead = results => {
             this.clearOverlay();
 
