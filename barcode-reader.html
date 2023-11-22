@@ -114,7 +114,11 @@
             document.getElementById('loading-status').hidden = true;
             let runtimeSettings = await reader.getRuntimeSettings();
             defaultSettings = await reader.outputRuntimeSettingsToString();
-            document.getElementById("json-data").value = defaultSettings; //JSON.stringify(runtimeSettings, null, 2);
+            document.getElementById("json-data").value = defaultSettings; 
+            //JSON.stringify(runtimeSettings, null, 2);
+            reader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":512}}")
+
+            
         })();
 
         document.getElementById("file").addEventListener("change", function () {
