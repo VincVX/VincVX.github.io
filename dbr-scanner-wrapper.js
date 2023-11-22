@@ -72,7 +72,7 @@ var DBRWrapper = /** @class */ (function () {
                         return [4 /*yield*/, Dynamsoft.DBR.BarcodeScanner.createInstance()];
                     case 2:
                         _a.scanner = _b.sent();
-                        return [4 /*yield*/, this.scanner.updateRuntimeSettings("coverage")];
+                        return [4 /*yield*/, this.scanner.updateRuntimeSettings("balance")];
                     case 3:
                         _b.sent();
                         return [4 /*yield*/, this.scanner.setUIElement(this.videoContainer)];
@@ -123,7 +123,7 @@ var DBRWrapper = /** @class */ (function () {
                         return [4 /*yield*/, Dynamsoft.DBR.BarcodeScanner.createInstance()];
                     case 1:
                         _a.scanner = _b.sent();
-                        return [4 /*yield*/, this.scanner.updateRuntimeSettings("coverage")];
+                        return [4 /*yield*/, this.scanner.updateRuntimeSettings("balance")];
                     case 2:
                         _b.sent();
                         this.scanner.onFrameRead = function (results) {
